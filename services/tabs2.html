@@ -1,0 +1,232 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Animated Responsive Tabs</title>
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css" />
+  <style>
+    * {
+      margin: 0;
+      padding: 0;
+      box-sizing: border-box;
+    }
+
+    body {
+      font-family: Arial, sans-serif;
+    }
+
+    .tabs {
+      width: 100%;
+      padding: 30px;
+    }
+
+    .tabs > h1 {
+      font-size: 3rem;
+      text-align: center;
+      margin-bottom: 30px;
+      color: black;
+    }
+
+    .tabss {
+      width: 100%;
+      display: flex;
+      justify-content: space-around;
+      align-items: center;
+      margin-bottom: 40px;
+    }
+
+    .tabss > div {
+      width: 350px;
+      height: 80px;
+      border-radius: 20px;
+      background-color: #5774c7;
+      font-size: 30px;
+      font-weight: bold;
+      display: flex;
+      justify-content: center;
+      color: white;
+      align-items: center;
+      cursor: pointer;
+      transition: background-color 0.4s ease, transform 0.4s ease;
+    }
+
+    .tabss > div:hover {
+      background-color: #fca503;
+      transform: scale(1.05);
+    }
+
+    .tabscontent {
+      width: 100%;
+      height: auto;
+      display: none;
+      flex-direction: column;
+      transition: all 0.5s ease;
+    }
+
+    .tabscontent > h1 {
+      font-size: 30px;
+      text-align: center;
+    }
+
+    .disorders {
+      width: 100%;
+      display: flex;
+      justify-content: space-around;
+      align-items: center;
+    }
+
+    .subdisorders > ul {
+      list-style: none;
+      font-size: 20px;
+    }
+
+    .images {
+      width: 100%;
+      display: flex;
+      justify-content: space-around;
+      align-items: center;
+    }
+
+    .images > img {
+      width: 20vw;
+      height: 40vh;
+      object-fit: cover;
+      border-radius: 20px;
+      object-position: center;
+    }
+
+    /* Default visibility for the first tab */
+    .active {
+      display: flex !important;
+    }
+
+    /* Mobile responsiveness */
+    @media screen and (max-width: 600px) {
+      .tabss {
+        flex-direction: column;
+      }
+
+      .tabss > div {
+        width: 100%;
+        margin-bottom: 10px;
+        height: 60px;
+      }
+
+      .tabscontent h1 {
+        font-size: 1.5rem;
+      }
+
+      .disorders {
+        flex-direction: column;
+        align-items: start;
+      }
+
+      .subdisorders li {
+        font-size: 1.1rem;
+      }
+
+      .images > img {
+        width: 80vw;
+        height: auto;
+      }
+    }
+  </style>
+</head>
+<body>
+  <div class="tabs">
+    <h1>Orthopedical solutions</h1>
+    <div class="tabss">
+      <div class="tab1">Conditions treated</div>
+      <div class="tab2">Diagnostic options</div>
+      <div class="tab3">Treatment options</div>
+    </div>
+
+    <!-- Tab Content 1 -->
+    <div class="tabscontent active">
+      <h1>
+        Our Orthopedic Services cover a wide range of musculoskeletal conditions, including:
+      </h1>
+      <div class="disorders">
+        <div class="subdisorders">
+          <ul>
+            <li><i class="fa-solid fa-plus"></i> Joints/Bone/Muscle pain</li>
+            <li><i class="fa-solid fa-plus"></i>Joint effusion (Water/Pus/Blood collection in joint space)</li>
+            <li><i class="fa-solid fa-plus"></i>Chronic backache</li>
+            <li><i class="fa-solid fa-plus"></i> Arthritis</li>
+          </ul>
+        </div>
+      </div>
+      <div class="images">
+        <img src="https://img.freepik.com/free-vector/rheumatology-concept-illustration_114360-9278.jpg" alt="" />
+        <img src="https://img.freepik.com/premium-photo/young-man-experiencing-severe-lower-back-pain_1294002-3787.jpg" alt="" />
+        <img src="https://img.freepik.com/free-vector/arthritis-concept-illustration_114360-7167.jpg" alt="" />
+      </div>
+    </div>
+
+    <!-- Tab Content 2 -->
+    <div class="tabscontent">
+      <h1>
+        Our Orthopedic department utilizes advanced diagnostic techniques and state-of-the-art imaging technologies:
+      </h1>
+      <div class="disorders">
+        <div class="subdisorders">
+          <ul>
+            <li><i class="fa-solid fa-plus"></i> Synovial fluids examination</li>
+            <li><i class="fa-solid fa-plus"></i> Blood/Urine reports</li>
+            <li><i class="fa-solid fa-plus"></i> X-ray</li>
+            <li><i class="fa-solid fa-plus"></i> Ultrasound</li>
+          </ul>
+        </div>
+      </div>
+      <div class="images">
+        <img src="https://img.freepik.com/free-photo/lab-doctor-performing-medical-exam-urine_23-2149372023.jpg" alt="" />
+        <img src="https://img.freepik.com/free-photo/back-view-doctor-looking-ct-scans-computer_23-2149341488.jpg" alt="" />
+        <img src="https://img.freepik.com/free-vector/sonography-concept-illustration_114360-9107.jpg" alt="" />
+      </div>
+    </div>
+
+    <!-- Tab Content 3 -->
+    <div class="tabscontent">
+      <h1>
+        Once a diagnosis is made, personalized treatment plans may include:
+      </h1>
+      <div class="disorders">
+        <div class="subdisorders">
+          <ul>
+            <li><i class="fa-solid fa-plus"></i> Medication</li>
+            <li><i class="fa-solid fa-plus"></i> Physiotherapy</li>
+            <li><i class="fa-solid fa-plus"></i> Rehabilitation</li>
+            <li><i class="fa-solid fa-plus"></i> Synovial fluid taping</li>
+          </ul>
+        </div>
+      </div>
+      <div class="images">
+        <img src="https://img.freepik.com/free-vector/healthcare-medications-composition_1284-71689.jpg" alt="" />
+        <img src="https://img.freepik.com/premium-photo/high-angle-male-osteopathic-therapist-checking-female-patient_1156758-34404.jpg" alt="" />
+        <img src="https://img.freepik.com/free-photo/front-view-young-female-doing-manicure-blue_140725-24225.jpg" alt="" />
+      </div>
+    </div>
+  </div>
+
+  <script>
+    const tabs = document.querySelectorAll(".tabss > div");
+    const tabsContent = document.querySelectorAll(".tabscontent");
+
+    tabs.forEach((tab, index) => {
+      tab.addEventListener("click", () => {
+        // Hide all tab contents
+        tabsContent.forEach(content => content.classList.remove("active"));
+        // Remove highlight from all tabs
+        tabs.forEach(tab => tab.style.backgroundColor = "#5774c7");
+
+        // Show clicked tab content
+        tabsContent[index].classList.add("active");
+
+        // Highlight active tab
+        tab.style.backgroundColor = "#fca503";
+      });
+    });
+  </script>
+</body>
+</html>
